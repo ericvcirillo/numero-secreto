@@ -56,7 +56,7 @@ function verificarChute() {
 }
 
 function gerarNumeroAleatorio() {
-  let numeroEscolhido = parseInt(Math.random() * 10 + 1);
+  let numeroEscolhido = parseInt(Math.random() * 4 + 1);
   let quantidadeDeElementosNaLista = listaDeNumerosUsados.length;
   if (quantidadeDeElementosNaLista == 4) {listaDeNumerosUsados = []};
   if (listaDeNumerosUsados.includes(numeroEscolhido)) {
