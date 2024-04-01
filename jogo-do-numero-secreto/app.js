@@ -2,8 +2,8 @@ function exibirTextoNaTela(tag, texto) {
   let nome = document.querySelector(tag);
   nome.innerHTML = texto;
 }
-8
-let tentativasAtuais = 5;
+
+let tentativasAtuais = 6;
 
 let listaDeNumerosUsados = []
 
@@ -17,7 +17,7 @@ palavra();
 let mensagemTentativas = `escolha um número entre 1 e 10, ${tentativasAtuais} ${palavraTentativa} restantes`;
 
 function exibirMensagemInicial() {
-exibirTextoNaTela("h1", "JOGÃO");
+exibirTextoNaTela("h1", "Jogo do número secreto");
 exibirTextoNaTela("p", mensagemTentativas);
 }
 
@@ -58,7 +58,7 @@ function verificarChute() {
 function gerarNumeroAleatorio() {
   let numeroEscolhido = parseInt(Math.random() * 4 + 1);
   let quantidadeDeElementosNaLista = listaDeNumerosUsados.length;
-  if (quantidadeDeElementosNaLista == 3) {listaDeNumerosUsados = []};
+  if (quantidadeDeElementosNaLista == 4) {listaDeNumerosUsados = []};
   if (listaDeNumerosUsados.includes(numeroEscolhido)) {
     return gerarNumeroAleatorio()
   } else {listaDeNumerosUsados.push(numeroEscolhido)
